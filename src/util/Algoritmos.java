@@ -15,5 +15,17 @@ public abstract class Algoritmos {
         }
     }
 
-   
+    /**
+     * Calcula el factorial de un número entero dado.
+     *
+     * @param numero El número entero para el cual se calculará el factorial.
+     * @return El factorial del número dado.
+     */
+    public static int factorial(int numero) {
+        if (numero == 0) {
+            return 1;
+        } else {
+            return numero * factorial(numero - 1);
+        }
+    }
 }
