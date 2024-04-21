@@ -28,4 +28,21 @@ public abstract class Algoritmos {
             return numero * factorial(numero - 1);
         }
     }
+    /**
+     * Verifica si un número entero dado es primo.
+     *
+     * @param numero El número entero que se verificará.
+     * @return true si el número es primo, false si no lo es.
+     */
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
